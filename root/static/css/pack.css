@@ -1,0 +1,136 @@
+#pack {
+    color: #fefefe;
+	clear: both;
+}
+
+#pack h2 {
+    width: 376px;
+    height: 376px;
+    border: 8px solid #0aa;
+    position: relative;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-weight: normal;
+    margin: 4px;
+}
+
+#pack h3 {
+    position: relative;
+    top: -8px;
+    left: -8px;
+    width: 360px;
+    background: rgba( 55, 55, 55, 0.75 );
+    text-align: right;
+    padding: 8px;
+    font-weight: normal;
+}
+
+#pack ul, #results ul {
+    display: inline;
+}
+
+#pack h2 span, #pack li a, #results h2 span, #results li a {
+    display: block;
+    background: rgba( 55, 55, 55, 0.75 );
+    text-align: right;
+    padding: 8px;
+    position: absolute;
+    bottom: 0;
+}
+
+#pack h2 span, #results h2 span {
+    width: 360px;
+}
+
+#pack li, #results li {
+    border: 8px solid #000;
+    width: 176px;
+    height: 176px;
+    position: relative;
+    margin: 4px;
+    overflow: hidden;
+}
+
+#pack a, #results a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#pack h2 a, #results h2 a {
+    color: #0aa;
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+}
+
+#pack li a, #results li a {
+    width: 160px;
+	display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: '...';
+}
+
+#pack li.desc, #resutls li.desc {
+    background-color: #000;
+    width: 360px;
+    height: 360px;
+    border: 8px solid #0aa;
+    padding: 8px;
+}
+
+#pack li.blank, #results li.blank {
+    border: 0;
+    width: 192px;
+    height: 192px;
+}
+
+#pack .infobox {
+	padding-left: 16px;
+}
+#years, .pager {
+	overflow: auto;
+	padding-bottom: 8px;
+	margin-top: 8px;
+}
+
+#years li, .pager span {
+	float: left;
+	margin-right: 8px;
+	background: #ababab;
+	margin-bottom: 8px;
+}
+
+#years li a, .pager span a {
+	color: #fff;
+	text-decoration: none;
+	padding: 2px 8px 8px 8px;
+	display: block;
+}
+
+#years li.current, .pager span.num.current {
+	background: #00ffff;
+	padding: 2px 8px 8px 8px;
+}
+
+#years li.current a, .pager span.num.current a {
+	color: #000;
+	
+}
+#years li:hover, .pager span.num:hover {
+	background: #00aead;
+}
+
+#years li a:hover, .pager span.num a:hover {
+	color: #fff;
+}
+
+.pager p {
+	clear: both;
+}
+
+.pager {
+	clear: both;
+	padding-top: 8px;
+}
