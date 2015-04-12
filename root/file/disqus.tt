@@ -3,9 +3,14 @@
 [% SET title = file ? file.pack.filename _ "/" _ file.filename  : pack.filename %]
 [% SET category = file ? 310168 : 310167 %]
 <div class=infobox id=disqus_container>
+<<<<<<< HEAD
 	<h3>View comments <span>&darr;</span></h3>
 	<div>
 
+=======
+	<h3>View discussion <span>&darr;</span></h3>
+	<div>
+>>>>>>> f72a770857caa9a899462a1069be789740492b45
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
 		    var disqus_shortname = 'sixteencolors'; // required: replace example with your forum shortname
@@ -24,7 +29,10 @@
 		</script>
 		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 		<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f72a770857caa9a899462a1069be789740492b45
 	</div>
 </div>

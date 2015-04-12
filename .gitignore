@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 *.bak
 META.yml
 *.db
 *.db.bak
+=======
+META.yml
+*.db
+>>>>>>> f72a770857caa9a899462a1069be789740492b45
 Makefile
 Makefile.old
 cover_db

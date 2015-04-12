@@ -48,6 +48,7 @@
 	</script>
 </head>
 <body>
+<<<<<<< HEAD
 
 <!-- BEGIN: Facebook JavaScript SDK -->
 <script>
@@ -71,6 +72,18 @@
 
     <div id=auth>
         <div class=body>
+=======
+    <div id=auth>
+        <div class=body>
+     <!--
+       
+<p>[% IF c.user_exists %][% c.user.openid %] [<a href="[% c.uri_for('/logout') %]">Logout</a>][% ELSE %]<a class=login href="[% c.uri_for('/login') %]">Login to Sixteen Colors</a>[% END %]</p>
+            <form method=post id=login action=[% c.uri_for( '/login' ) %]>
+                <input class=openid name=openid />
+                <input type=submit class=submit value=Login />
+            </form>
+-->
+>>>>>>> f72a770857caa9a899462a1069be789740492b45
 
         </div>
     </div>
@@ -81,7 +94,11 @@
 	        <ul id=nav>
 	   
 	            <li><a href="[% c.uri_for( '/pack' ) %]">Artpacks</a></li>
+<<<<<<< HEAD
         	 <li><a href="https://www.facebook.com/sixteencolors/" target="_blank">Facebook Page</a></li>
+=======
+        	 <li><a href="https://www.facebook.com/sixteencolors/" target="_blank">Facebook</a></li>
+>>>>>>> f72a770857caa9a899462a1069be789740492b45
 		</ul>
 			<div id="searchbox">			
 	            <form method=get id=search action=[% c.uri_for( '/search' ) %]>
@@ -92,11 +109,16 @@
 		</div>
 		
     <div id="content">
+<<<<<<< HEAD
 [% IF c.req.uri.host.match( 'legacy|localhost' ) %]
+=======
+[% IF c.req.uri.host.match( 'beta|localhost' ) %]
+>>>>>>> f72a770857caa9a899462a1069be789740492b45
 <div id=warning>
 <p>You are viewing a development version of the Sixteen Colors web site. Various parts of the the site may be horribly broken. For a more stable experience, check out <a href="http://sixteencolors.net">sixteencolors.net</a>.</p>
 </div>
 [% END %]
+<<<<<<< HEAD
 
 <!--
 
@@ -108,6 +130,8 @@
 
 -->
 
+=======
+>>>>>>> f72a770857caa9a899462a1069be789740492b45
 [% content %]
     </div>
 
@@ -142,12 +166,19 @@ About 16c<br> -->
 </span></p>
 <p>Browse <span>
 <!-- Search<br> -->
+<<<<<<< HEAD
 <a href="[% c.uri_for( '/pack') %]">Artpacks</a><br>
+=======
+<a href="[% c.uri_for( '/pack') %]">Packs</a><br>
+>>>>>>> f72a770857caa9a899462a1069be789740492b45
 <!-- Groups<br>
 Artists<br> -->
 </span></p>
         </div>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f72a770857caa9a899462a1069be789740492b45
 </body>
 </html>
