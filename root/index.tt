@@ -1,0 +1,59 @@
+
+<div id=newpacks style="width: 100%; margin-top: 15px;">
+
+<!-- 
+Sixteen Colors ANSI Art and ASCII Art Archive 
+-->
+
+<h2 class=heading2 style="margin-left: 0;"><span>About the Sixteen Colors ANSI and ASCII Artwork Archive</span></h2>
+
+<ul>
+
+<p>
+
+The Sixteen Colors ANSI and ASCII Artwork Archive is a carefully maintained collection of artwork created and released by groups 
+birthed in the underground artscene of <a href="http://en.wikipedia.org/wiki/Bulletin_board_system" target="_blank">Bulletin Board Systems</a> (BBSes). This vibriant, unique and highighly talented and technical art scene gave rise to a 
+digital culture that will forever be apart of the history of the information age. The same skill, culture and highly competive 
+group of individuals still work with their respective groups to make regular releases of some of the finest textmode artwork 
+you'll ever see. Welcome to Sixteen Colors.
+
+</p>
+
+<br />
+<br />
+
+<p>
+For those of you unfamiliar with this highly expressive and vibrant medium, ANSI and ASCII artwork is a computer artwork medium that was widely used at one time on <a href="http://en.wikipedia.org/wiki/Bulletin_board_system" target="_blank">BBSes</a>. It is similar to ASCII art, but constructed from a larger set of 256 letters, numbers, and symbols — all codes found in IBM code page 437, often referred to as extended ASCII and used in MS-DOS and UNIX environments. ANSI art also contains special ANSI escape sequences that color text with the 16 foreground and 8 background colors offered by ANSI.SYS, an MS-DOS device driver loosely based upon the ANSI X3.64 standard for text terminals.
+
+</p>
+
+</ul>
+
+<!-- Latest Artpacka -->
+
+<h2 class=heading2 style="margin-left: 0;"><span>Recently Released Artpacks</span></h2>
+<ul>
+[% FOREACH pack IN c.model( 'DB::Pack' ).recent %]
+[% packlink = c.uri_for( '/pack', pack.canonical_name ) %]
+[% SET pack_preview = packlink %]
+[% SET pack_preview = pack_preview.replace( '\(', '\\(' ) %]
+[% SET pack_preview = pack_preview.replace( '\)', '\\)' ) %]
+[% SET pack_preview = pack_preview.replace( '\[', '\\[' ) %]
+[% SET pack_preview = pack_preview.replace( '\]', '\\]' ) %]
+    <li style="background-image: url([% pack_preview %]/preview?s=1)"><a href="[% packlink %]">[% pack.canonical_name %]</a></li>
+[% END %]
+</ul>
+</div>
+<div id=randomworks class=clear>
+
+<!-- Random Artwork -->
+
+<h2 class=heading2><span>Random Artwork</span></h2>
+<ul>
+[% FOREACH work IN c.model( 'DB::File' ).random %]
+[% worklink = c.uri_for( '/pack', work.pack.canonical_name, work.filename ) | html  %]
+    <li style="background-image: url([% worklink %]/preview?s=1)"><a href="[% worklink %]">[% work.filename | html %]</a></li>
+[% END %]
+</ul>
+
+</div>
